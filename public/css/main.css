@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+.sideMenu {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background: #BAD800;
+  width: 90px;
+  height: 100vh;
+  padding: 30px 0px;
+  transition: width 0.2s ease-in;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* Track */
+}
+.sideMenu::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+.sideMenu::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.sideMenu::-webkit-scrollbar-thumb {
+  background: #879430;
+  border-radius: 10px;
+}
+.sideMenu::-webkit-scrollbar-thumb:hover {
+  background: #616e07;
+}
+.sideMenu__top {
+  position: relative;
+  padding: 0px 20px;
+}
+.sideMenu__top .logo {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.sideMenu__top .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.sideMenu .divider {
+  margin: 10px 0px;
+  width: 100%;
+  height: 0.6px;
+  border-radius: 1px;
+  background-color: #fff;
+  position: relative;
+}
+.sideMenu .divider::after {
+  content: "";
+  background: #fff;
+  height: 0.6px;
+  width: 100%;
+  position: absolute;
+  left: -40px;
+}
+.sideMenu .main-menu {
+  margin: 10px 0px;
+}
+.sideMenu .main-menu .menu-item {
+  padding: 0px 0px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sideMenu .main-menu .menu-item .menu-icon {
+  display: inline-block;
+  width: 0px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+}
+.sideMenu .main-menu .menu-item span {
+  margin-left: 40px;
+  position: absolute;
+  display: inline-block;
+  line-height: 40px;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+.sideMenu .main-menu .menu-item ul li {
+  cursor: pointer;
+}
+.sideMenu .main-menu .sub-menu {
+  margin-left: 20px;
+  border-left: 0px solid #fff;
+  padding-left: 10px;
+  height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sideMenu .main-menu .sub-menu a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  margin: 18px 0px;
+}
+.sideMenu .main-menu .sub-active {
+  height: auto;
+}
+
+.inactive {
+  transition: 0.3s;
+  width: 280px;
+}
+.inactive .toggle-menu-btn {
+  right: -50px;
+}
+.inactive .main-menu .menu-item span {
+  opacity: 1;
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.welcomePage {
+  padding-top: 47px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+}
+.welcomePage__content {
+  padding: 0px 20px;
+}
+.welcomePage__content h2 {
+  font-size: 26px;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: -358px;
+  transition: 0.3s ease-in;
+}
+.right .sideContent {
+  height: 100vh;
+  width: 360px;
+  background-color: #fff;
+  z-index: 100;
+  transition: 0.4s ease-in-out;
+  box-shadow: 1px 1px 4px #000;
+  padding: 10px 0px;
+  overflow-y: auto;
+}
+.right .sideContent .toggle-menu-btn {
+  background: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  left: -50px;
+  z-index: 100;
+  font-size: 29px;
+  border: 0px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.308);
+  padding: 5px 10px;
+  color: #BAD800;
+}
+.right .content {
+  padding: 20px 0px;
+}
+.right .content__menu {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding-left: 10px;
+}
+.right .content__menu .content-btn {
+  border-radius: 4px;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid gray;
+  transition: 0.2s ease-in-out;
+}
+.right .content__menu .content-btn:hover {
+  transform: scale(0.99);
+  background: #e4e4e4;
+}
+.right .content__menu .active-calc {
+  background: #e4e4e4;
+}
+.right .content__menu .active-bg {
+  background: #e4e4e4;
+}
+.right .main-content {
+  padding: 0px 20px;
+}
+
+.open {
+  right: 0px;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+}
+.calculator .calculator-grid {
+  padding: 10px 10px;
+  border-radius: 7px;
+  background-color: #BAD800;
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 4.35rem);
+  grid-template-rows: minmax(4rem, auto) repeat(5, 3.5rem);
+}
+.calculator .span-two {
+  grid-column: span 2;
+}
+.calculator .output {
+  height: 85px;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.85rem;
+  word-break: break-all;
+  background-color: rgba(247, 243, 243, 0.75);
+  margin: 20px;
+  border-radius: 5px;
+}
+.calculator .output .previous-operand {
+  color: gray;
+  font-size: 1.5rem;
+  padding: 4px 0px;
+}
+.calculator .output .current-operand {
+  color: gray;
+  font-size: 2.2rem;
+  padding: 4px 0px;
+  line-height: 1.3;
+}
+.calculator button {
+  font-size: 16px;
+  margin: 3px;
+  border-radius: 20px;
+}
+.calculator button:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 0 0 5px;
+  padding: 7px 0;
+  border: none;
+  border-bottom: 1px solid #3d5866;
+}
+
+textarea {
+  height: 75px;
+  resize: none;
+}
+
+.note-btn-create {
+  cursor: pointer;
+  border: none;
+  margin-left: 5px;
+  float: right;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #3d5866;
+  background-color: #eff3f6;
+}
+
+.card {
+  display: inline-block;
+  background: white;
+  margin: 24px 10px 0;
+  padding: 16px;
+  position: relative;
+  border-radius: 5px;
+  transition: box-shadow 0.25s;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
+}
+
+.card__title {
+  margin: 0 0 1em;
+}
+
+.card__action {
+  margin: 1em 0 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.loginHeader {
+  padding: 24px 10px;
+  background: #BAD800;
+}
+.loginHeader .logo {
+  color: #fff;
+}
+
+.login .log {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+.login .log h2 {
+  font-size: 25px;
+}
+.login .log label {
+  padding: 10px 0px;
+}
+.login .log .login-btn {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background: #BAD800;
+  color: #fff;
+}
+
+.pages-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.con {
+  flex-basis: 100%;
+}
+
+.Wasp__header .logo {
+  padding: 60px 60px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+
+.welcomePage {
+  padding: 25px 0px;
+  border-bottom: 1px solid gray;
+}
+.welcomePage h2 {
+  text-transform: uppercase;
+}
+
+.wasp__table {
+  padding: 10px 20px;
+}
+.wasp__table tr {
+  width: 100%;
+}
+.wasp__table tr th {
+  padding: 4px 10px;
+  border: 1px solid #000;
+  font-size: 14px;
+  background: grey;
+  color: #fff;
+}
+
+.search {
+  padding: 10px 20px;
+}
+.search form {
+  border: 1px solid #b9b8b8;
+  border-radius: 4px;
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search form .title p {
+  font-size: 18px;
+  margin: 0px 10px;
+}
+.search form .input-field {
+  display: inline-flex;
+  align-items: center;
+  flex-basis: 50%;
+}
+.search form .input-field input {
+  border: 1px solid gray;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 0px 10px;
+}
+.search form .input-field input:focus {
+  border: 1px solid gray;
+}
+.search form .input-field .search-btn {
+  color: #fff;
+  background: #f56666;
+  padding: 8px 25px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+.task {
+  margin: 20px 0px;
+  border-top: 1px solid #cecece;
+}
+.task__bar {
+  padding: 30px 0px;
+}
+.task__menu {
+  padding: 0px 10px;
+  border-bottom: 1px solid gray;
+}
+.task__btn {
+  background: none;
+  border-radius: 2px;
+  padding: 5px 20px;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 0px;
+  margin: 0px 0px;
+  outline: none;
+}
+.task__btn:hover {
+  background: #dadada;
+}
+.task__btn:active {
+  background: #dadada;
+}
+
+.self__task {
+  padding: 0px 15px;
+}
+.self__task h2 {
+  font-size: 20px;
+}
+
+.st-bg-btn {
+  background: #BAD800;
+}
+
+.remainder__tabel {
+  padding: 10px 20px;
+}
+.remainder__tabel tr th {
+  padding: 5px 10px;
+  background: #BAD800;
+  border: 1px solid #fff;
+}
+
+.otherTask {
+  padding: 10px 20px;
+}
+.otherTask h2 {
+  font-size: 20px;
+}
+.otherTask .otherTask__content {
+  border: 1px solid #b9b8b8;
+  border-radius: 4px;
+  padding: 30px 10px;
+}
+.otherTask .otherTask__content .content-width {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.otherTask .otherTask__content .input-field {
+  margin-bottom: 15px;
+}
+.otherTask .otherTask__content .input-field input {
+  width: 69%;
+  margin-left: 17px;
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 4px;
+}
+.otherTask .otherTask__content .dropdown {
+  display: flex;
+  align-items: center;
+}
+.otherTask .otherTask__content .dropdown .select {
+  width: 70%;
+}
+.otherTask .otherTask__content .dropdown .userLabel {
+  margin-right: 30px;
+}
+
+.table {
+  padding: 10px 20px;
+}
+.table tr {
+  width: 100%;
+}
+.table tr th {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  position: relative;
+}
+.table tr .st-bg {
+  background: #BAD800;
+}
+
+table th,
+table td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a, a:active,
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.con {
+  margin-left: 90px;
+  transition: margin-left 0.2s ease-in;
+  padding: 0px 0px;
+}
+
+.con-act {
+  margin-left: 280px;
+}
+
+.container-m {
+  padding: 0px 0px;
+}
+
+/*# sourceMappingURL=main.css.map */

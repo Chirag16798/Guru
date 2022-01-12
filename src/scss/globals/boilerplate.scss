@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+a,a:active,
+a:hover{
+    text-decoration: none;
+}
+
+
+li{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.container{
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.con{
+    margin-left: 90px;
+    transition: margin-left 0.2s ease-in;
+    padding: 0px 0px;
+}
+
+.con-act{
+    margin-left: 280px;
+}
+
+.container-m{
+    padding: 0px 0px;
+}

@@ -1,0 +1,43 @@
+.pages-container{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.con{
+    flex-basis: 100%;
+}
+
+
+.Wasp{
+    &__header{
+        .logo{
+            padding: 60px 60px;
+            border-bottom: 1px solid gray;
+            width: 100%;
+        }
+    }   
+}
+
+
+.welcomePage{
+    padding: 25px 0px;
+    border-bottom: 1px solid gray;
+    h2{
+        text-transform: uppercase;
+
+    }
+}
+
+.wasp__table{
+    padding : 10px 20px;
+    tr{
+        width: 100%;
+        th{
+            padding: 4px 10px;
+            border: 1px solid #000;
+            font-size: 14px;
+            background: grey;
+            color: #fff;
+        }
+    }
+}
