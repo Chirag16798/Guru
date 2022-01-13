@@ -76,15 +76,15 @@ const SideMenu = (props) => {
             name : 'Once' , to : '' , subMenu : [
                 {
                 name : 'Country',
-                to : 'content/courses'
+                to : '/Country'
                 },
                 {
                 name : 'Languages',
-                to : 'content/courses'
+                to : '/Languages'
                 },
                 {
                     name : 'Currency',
-                    to : 'content/courses'
+                    to : '/Currency'
                 },
                 {
                     name : 'Measure',
@@ -210,124 +210,3 @@ const SideMenu = (props) => {
 }
 
 export default SideMenu
-
-
-
-
-
-
-
-
-                        // {/* <li>
-                        //     <a className='menu-item'>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-speedometer2"></i>
-                        //         </div>
-                        //         <span>Dashboard</span>
-                        //     </a>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item'>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-robot"></i>
-                        //         </div>
-                        //         <span>Wasp</span>
-                        //     </a>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item' onClick={()=> setExpand(!expand)}>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-speedometer2"></i>
-                        //         </div>
-                        //         <span>Task</span>
-                        //     </a>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item' onClick={()=> setExpand(!expand)}>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-speedometer2"></i>
-                        //         </div>
-                        //         <span>Tact</span>
-                        //     </a>
-                        //     <ul className={`sub-menu ${expand ? "sub-active" : ""}`}>
-                        //         <li>
-                        //             <a>Tact 1</a>
-                        //         </li>
-                        //         <li>
-                        //             <a>Tact 2</a>
-                        //         </li>
-                        //     </ul>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item' onClick={()=> setExpand(!expand)}>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-speedometer2"></i>
-                        //         </div>
-                        //         <span>Cost</span>
-                        //     </a>
-                        //     <ul className={`sub-menu ${expand ? "sub-active" : ""}`}>
-                        //         <li>
-                        //             <a>Cost 1</a>
-                        //         </li>
-                        //         <li>
-                        //             <a>Cost 2</a>
-                        //         </li>
-                        //     </ul>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item' onClick={()=> setExpand(!expand)}>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-speedometer2"></i>
-                        //         </div>
-                        //         <span>Once</span>
-                        //     </a>
-                        //     <ul className={`sub-menu ${expand ? "sub-active" : ""}`}>
-                        //         <li>
-                        //             <a>Once 1</a>
-                        //         </li>
-                        //         <li>
-                        //             <a>Once 1</a>
-                        //         </li>
-                        //     </ul>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item' onClick={()=> setExpand(!expand)}>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-speedometer2"></i>
-                        //         </div>
-                        //         <span>Boss</span>
-                        //     </a>
-                        //     <ul className={`sub-menu ${expand ? "sub-active" : ""}`}>
-                        //         <li>
-                        //             <a>Boss 1</a>
-                        //         </li>
-                        //         <li>
-                        //             <a>Boss 2</a>
-                        //         </li>
-                        //     </ul>
-                        // </li>
-                        // <Divider />
-
-                        // <li>
-                        //     <a className='menu-item' onClick={props.onClick}>
-                        //         <div className="menu-icon">
-                        //              <i class="bi bi-box-arrow-left"></i>
-                        //         </div>
-                        //         <span>Logout</span>
-                        //     </a>
-                        // </li>
-                        // <Divider />
-
-                        //  */}
